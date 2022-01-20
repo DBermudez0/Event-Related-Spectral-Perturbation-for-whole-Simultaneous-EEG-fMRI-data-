@@ -33,5 +33,4 @@ save('EEG_timeseries_whole_scan_AttAud2.mat', 'Time_series')
 % if you have multiple BEPOCH set data, I recommend saving the ERSP from
 % one BEPOCH set with all frequency band of interest because if you try
 % saving the ERSP from all .set files into a single non-scaler structure it
-% might give you problems saving it in a mat file because of its large
-% size.
+% might give you problems saving it in a mat file because of its large size.
