@@ -11,7 +11,7 @@ end
 
 for i = 1:EEG.nbchan %loop to each channel in EEGLAB data structure
 % EEGLAB function to compute the ERSP
-[ersp itc powbase times frequencies] = pop_newtimef( EEG, 1, i, [0 275199], [3         0.5] , 'topovec', i, 'elocs', EEG.chanlocs, 'chaninfo', EEG.chaninfo, 'caption',EEG.chanlocs(i).labels, 'baseline',[0], 'freqs', [a(1) a(2)], 'plotphase', 'off', 'padratio', 1);
+[ersp itc powbase times frequencies] = pop_newtimef( EEG, 1, i, [0 (EEG.pnts/EEG.srate)*1000], [3         0.5] , 'topovec', i, 'elocs', EEG.chanlocs, 'chaninfo', EEG.chaninfo, 'caption',EEG.chanlocs(i).labels, 'baseline',[0], 'freqs', [a(1) a(2)], 'plotphase', 'off', 'padratio', 1);
 close all
 % average through the frequency window
 ERP = mean(ersp,1);
